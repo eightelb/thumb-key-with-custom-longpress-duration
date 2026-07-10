@@ -488,20 +488,23 @@ fun KeyboardKey(
             .pointerInput(key1 = id) {
                 detectDragGestures(
                     onDragStart = {
-                        isDragged.value = true
+                        if (!longPressTriggered) {
+                            isDragged.value = true
+                        }
                     },
                     onDrag = { change, dragAmount ->
-                        if (!longPressTriggered) {
-                            change.consume()
-                        }
-                        val (x, y) = dragAmount
-                        offsetX += x
-                        offsetY += y
-                        val offset = Offset(offsetX, offsetY)
-                        positions += offset
-                        if (offset.getDistanceSquared() > maxOffset.getDistanceSquared()) maxOffset = offset
+ if (longPressTriggered) return@detectDragGestures
+        change.consume()
+        
+        val (x, y) = dragAmount
+        offsetX += x
+        offsetY += y
+        val offset = Offset(offsetX, offsetY)
+        positions += offset
+        if (offset.getDistanceSquared() > maxOffset.getDistanceSquared()) maxOffset = offset
 
-                        if (longPressTriggered) return@detectDragGestures
+
+
 
                         // First detection is large enough to preserve swipe actions.
                         val slideOffsetTrigger = (keySize.dp.toPx() * 0.75) + minSwipeLength
@@ -663,6 +666,18 @@ fun KeyboardKey(
                         }
                     },
                     onDragEnd = {
+                        if (longPressTriggered) {
+                            // Reset the drags
+                            offsetX = 0f
+                            offsetY = 0f
+                            maxOffset = Offset(0f, 0f)
+                            positions = listOf()
+
+                            // Reset selection
+                            selection = Selection()
+                            return@detectDragGestures
+                        }
+
                         lateinit var action: KeyAction
 
                         val slideHoldTicks = resetSlideHoldVariables()
