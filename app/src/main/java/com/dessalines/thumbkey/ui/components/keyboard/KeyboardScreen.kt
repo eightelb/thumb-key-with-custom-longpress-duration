@@ -909,6 +909,7 @@ fun KeyboardScreen(
                         clockwiseDragAction = clockwiseDragAction,
                         counterclockwiseDragAction = counterclockwiseDragAction,
                         slideHoldEnabled = slideHoldEnabled,
+                        longPressDuration = longPressDuration,
                         onSketchAction = onSketchAction,
                     )
                 }
