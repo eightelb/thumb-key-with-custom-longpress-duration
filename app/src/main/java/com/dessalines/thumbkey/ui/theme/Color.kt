@@ -805,6 +805,27 @@ fun ancom(): Pair<ColorScheme, ColorScheme> {
     return Pair(light, dark)
 }
 
+fun amoledLavender(): Pair<ColorScheme, ColorScheme> {
+    val (ancomLight, ancomDark) = ancom()
+    val lightAccent = Color(0xFF6750A4)
+    val darkAccent = Color(0xFFD0BCFF)
+
+    return Pair(
+        ancomLight.copy(
+            tertiary = lightAccent,
+            tertiaryContainer = lightAccent,
+            inversePrimary = Color(0xFFB69DF8),
+        ),
+        ancomDark.copy(
+            primaryContainer = Color(0xFF4F378B),
+            secondary = darkAccent,
+            tertiary = darkAccent,
+            onTertiary = darkAccent,
+            inverseOnSurface = darkAccent,
+        ),
+    )
+}
+
 fun twilight(): Pair<ColorScheme, ColorScheme> {
     val md_theme_light_primary = Color(0xFF44475A)
     val md_theme_light_onPrimary = Color(0xFFFFFFFF)

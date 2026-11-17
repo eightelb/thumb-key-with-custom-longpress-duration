@@ -43,6 +43,7 @@ fun ThumbkeyTheme(
             ThemeColor.HighContrast -> highContrast()
             ThemeColor.HighContrastColorful -> highContrastColorful()
             ThemeColor.Ancom -> ancom()
+            ThemeColor.AmoledLavender -> amoledLavender()
             ThemeColor.Neon -> neon()
             ThemeColor.Magma -> magma()
         }
