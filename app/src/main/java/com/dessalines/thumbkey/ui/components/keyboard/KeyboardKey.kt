@@ -140,12 +140,13 @@ fun KeyboardKey(
     onToggleNumericMode: (enable: Boolean) -> Unit,
     onToggleEmojiMode: (enable: Boolean) -> Unit,
     onToggleClipboardMode: (enable: Boolean) -> Unit,
+    onToggleSketchMode: (enable: Boolean) -> Unit,
     onToggleCapsLock: () -> Unit,
     onToggleHideLetters: () -> Unit,
     onAutoCapitalize: (enable: Boolean) -> Unit,
     onSwitchLanguage: () -> Unit,
     onChangePosition: ((old: KeyboardPosition) -> KeyboardPosition) -> Unit,
-    onKeyEvent: () -> Unit,
+    onKeyEvent: (action: KeyAction) -> Unit,
     oppositeCaseKey: KeyItemC? = null,
     numericKey: KeyItemC? = null,
     dragReturnEnabled: Boolean,
@@ -154,6 +155,7 @@ fun KeyboardKey(
     counterclockwiseDragAction: CircularDragAction,
     slideHoldEnabled: Boolean,
     longPressDuration: Int,
+    onSketchAction: (action: KeyAction.Sketch) -> Unit = {},
 ) {
     // Necessary for swipe settings to get updated correctly
     val id =
@@ -422,12 +424,14 @@ fun KeyboardKey(
                                         onToggleNumericMode = onToggleNumericMode,
                                         onToggleEmojiMode = onToggleEmojiMode,
                                         onToggleClipboardMode = onToggleClipboardMode,
+                                        onToggleSketchMode = onToggleSketchMode,
                                         onToggleCapsLock = onToggleCapsLock,
                                         onToggleHideLetters = onToggleHideLetters,
                                         onAutoCapitalize = onAutoCapitalize,
                                         onSwitchLanguage = onSwitchLanguage,
                                         onChangePosition = onChangePosition,
                                         onKeyEvent = onKeyEvent,
+                                        onSketchAction = onSketchAction,
                                     )
                                     doneKeyAction(scope, action, isDragged, releasedKey, animationHelperSpeed)
                                     if (vibrateOnTap) {
@@ -440,7 +444,7 @@ fun KeyboardKey(
                             }
                         }
 
-                    var upOrCancel = waitForUpOrCancellation()
+                    val upOrCancel = waitForUpOrCancellation()
                     longPressJob.cancel()
 
                     if (upOrCancel != null && !longPressTriggered && !isDragged.value) {
@@ -468,12 +472,14 @@ fun KeyboardKey(
                             onToggleNumericMode = onToggleNumericMode,
                             onToggleEmojiMode = onToggleEmojiMode,
                             onToggleClipboardMode = onToggleClipboardMode,
+                            onToggleSketchMode = onToggleSketchMode,
                             onToggleCapsLock = onToggleCapsLock,
                             onToggleHideLetters = onToggleHideLetters,
                             onAutoCapitalize = onAutoCapitalize,
                             onSwitchLanguage = onSwitchLanguage,
                             onChangePosition = onChangePosition,
                             onKeyEvent = onKeyEvent,
+                            onSketchAction = onSketchAction,
                         )
                         doneKeyAction(scope, action, isDragged, releasedKey, animationHelperSpeed)
                     }
@@ -484,8 +490,7 @@ fun KeyboardKey(
                         )
                     }
                 }
-            }
-            .pointerInput(key1 = id) {
+            }.pointerInput(key1 = id) {
                 detectDragGestures(
                     onDragStart = {
                         if (!longPressTriggered) {
@@ -493,18 +498,14 @@ fun KeyboardKey(
                         }
                     },
                     onDrag = { change, dragAmount ->
- if (longPressTriggered) return@detectDragGestures
-        change.consume()
-        
-        val (x, y) = dragAmount
-        offsetX += x
-        offsetY += y
-        val offset = Offset(offsetX, offsetY)
-        positions += offset
-        if (offset.getDistanceSquared() > maxOffset.getDistanceSquared()) maxOffset = offset
-
-
-
+                        if (longPressTriggered) return@detectDragGestures
+                        change.consume()
+                        val (x, y) = dragAmount
+                        offsetX += x
+                        offsetY += y
+                        val offset = Offset(offsetX, offsetY)
+                        positions += offset
+                        if (offset.getDistanceSquared() > maxOffset.getDistanceSquared()) maxOffset = offset
 
                         // First detection is large enough to preserve swipe actions.
                         val slideOffsetTrigger = (keySize.dp.toPx() * 0.75) + minSwipeLength
@@ -783,12 +784,14 @@ fun KeyboardKey(
                                 onToggleNumericMode = onToggleNumericMode,
                                 onToggleEmojiMode = onToggleEmojiMode,
                                 onToggleClipboardMode = onToggleClipboardMode,
+                                onToggleSketchMode = onToggleSketchMode,
                                 onToggleCapsLock = onToggleCapsLock,
                                 onToggleHideLetters = onToggleHideLetters,
                                 onAutoCapitalize = onAutoCapitalize,
                                 onSwitchLanguage = onSwitchLanguage,
                                 onChangePosition = onChangePosition,
                                 onKeyEvent = onKeyEvent,
+                                onSketchAction = onSketchAction,
                             )
                             doneKeyAction(
                                 scope,
@@ -821,12 +824,14 @@ fun KeyboardKey(
                                         onToggleNumericMode = onToggleNumericMode,
                                         onToggleEmojiMode = onToggleEmojiMode,
                                         onToggleClipboardMode = onToggleClipboardMode,
+                                        onToggleSketchMode = onToggleSketchMode,
                                         onToggleCapsLock = onToggleCapsLock,
                                         onToggleHideLetters = onToggleHideLetters,
                                         onAutoCapitalize = onAutoCapitalize,
                                         onSwitchLanguage = onSwitchLanguage,
                                         onChangePosition = onChangePosition,
                                         onKeyEvent = onKeyEvent,
+                                        onSketchAction = onSketchAction,
                                     )
                                 }
                                 // Play an extra haptic effect on supported devices when slide deleting text

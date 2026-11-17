@@ -14,6 +14,7 @@ import androidx.compose.material.icons.automirrored.outlined.RotateRight
 import androidx.compose.material.icons.outlined.Abc
 import androidx.compose.material.icons.outlined.BorderInner
 import androidx.compose.material.icons.outlined.Circle
+import androidx.compose.material.icons.outlined.Keyboard
 import androidx.compose.material.icons.outlined.SpaceBar
 import androidx.compose.material.icons.outlined.SwapHoriz
 import androidx.compose.material.icons.outlined.Swipe
@@ -55,10 +56,13 @@ import com.dessalines.thumbkey.db.DEFAULT_SLIDE_HOLD_ENABLED
 import com.dessalines.thumbkey.db.DEFAULT_SLIDE_SENSITIVITY
 import com.dessalines.thumbkey.db.DEFAULT_SLIDE_SPACEBAR_DEADZONE_ENABLED
 import com.dessalines.thumbkey.db.DEFAULT_SPACEBAR_MULTITAPS
+import com.dessalines.thumbkey.db.DEFAULT_SWITCH_IME_MODE
+import com.dessalines.thumbkey.db.DEFAULT_SWITCH_TO_LETTERS_AFTER_SPACE
 import com.dessalines.thumbkey.ui.components.common.TestOutTextField
 import com.dessalines.thumbkey.ui.components.settings.about.SettingsDivider
 import com.dessalines.thumbkey.utils.CircularDragAction
 import com.dessalines.thumbkey.utils.CursorAccelerationMode
+import com.dessalines.thumbkey.utils.ImeSwitchMode
 import com.dessalines.thumbkey.utils.SimpleTopAppBar
 import com.dessalines.thumbkey.utils.TAG
 import com.dessalines.thumbkey.utils.toBool
@@ -93,6 +97,8 @@ fun BehaviorScreen(
     var slideBackspaceDeadzoneEnabledState = (settings?.slideBackspaceDeadzoneEnabled ?: DEFAULT_SLIDE_BACKSPACE_DEADZONE_ENABLED).toBool()
     var autoCapitalizeState = (settings?.autoCapitalize ?: DEFAULT_AUTO_CAPITALIZE).toBool()
     var spacebarMultiTapsState = (settings?.spacebarMultiTaps ?: DEFAULT_SPACEBAR_MULTITAPS).toBool()
+    var switchToLettersAfterSpaceState =
+        (settings?.switchToLettersAfterSpace ?: DEFAULT_SWITCH_TO_LETTERS_AFTER_SPACE).toBool()
 
     var dragReturnEnabledState = (settings?.dragReturnEnabled ?: DEFAULT_DRAG_RETURN_ENABLED).toBool()
     var circularDragEnabledState = (settings?.circularDragEnabled ?: DEFAULT_CIRCULAR_DRAG_ENABLED).toBool()
@@ -101,6 +107,7 @@ fun BehaviorScreen(
         CircularDragAction.entries[settings?.counterclockwiseDragAction ?: DEFAULT_COUNTERCLOCKWISE_DRAG_ACTION]
     var ghostKeysEnabledState = (settings?.ghostKeysEnabled ?: DEFAULT_GHOST_KEYS_ENABLED).toBool()
     var slideHoldEnabledState = (settings?.slideHoldEnabled ?: DEFAULT_SLIDE_HOLD_ENABLED).toBool()
+    var switchImeModeState = ImeSwitchMode.entries[settings?.switchImeMode ?: DEFAULT_SWITCH_IME_MODE]
 
     var longPressDurationState = (settings?.longPressDuration ?: DEFAULT_LONG_PRESS_DURATION).toFloat()
     var longPressDurationSliderState by remember { mutableFloatStateOf(longPressDurationState) }
@@ -123,6 +130,7 @@ fun BehaviorScreen(
                 slideBackspaceDeadzoneEnabled = slideBackspaceDeadzoneEnabledState.toInt(),
                 autoCapitalize = autoCapitalizeState.toInt(),
                 spacebarMultiTaps = spacebarMultiTapsState.toInt(),
+                switchToLettersAfterSpace = switchToLettersAfterSpaceState.toInt(),
                 dragReturnEnabled = dragReturnEnabledState.toInt(),
                 circularDragEnabled = circularDragEnabledState.toInt(),
                 clockwiseDragAction = clockwiseDragActionState.ordinal,
@@ -130,6 +138,7 @@ fun BehaviorScreen(
                 ghostKeysEnabled = ghostKeysEnabledState.toInt(),
                 slideHoldEnabled = slideHoldEnabledState.toInt(),
                 longPressDuration = longPressDurationState.toInt(),
+                switchImeMode = switchImeModeState.ordinal,
             ),
         )
     }
@@ -204,6 +213,25 @@ fun BehaviorScreen(
                         icon = {
                             Icon(
                                 imageVector = Icons.Outlined.SpaceBar,
+                                contentDescription = null,
+                            )
+                        },
+                    )
+                    SwitchPreference(
+                        value = switchToLettersAfterSpaceState,
+                        onValueChange = {
+                            switchToLettersAfterSpaceState = it
+                            updateBehavior()
+                        },
+                        title = {
+                            Text(stringResource(R.string.switch_to_letters_after_space))
+                        },
+                        summary = {
+                            Text(stringResource(R.string.switch_to_letters_after_space_description))
+                        },
+                        icon = {
+                            Icon(
+                                imageVector = Icons.Outlined.Abc,
                                 contentDescription = null,
                             )
                         },
@@ -460,6 +488,31 @@ fun BehaviorScreen(
                             Icon(
                                 imageVector = Icons.Outlined.BorderInner,
                                 contentDescription = stringResource(R.string.ghost_keys_enable),
+                            )
+                        },
+                    )
+                    SettingsDivider()
+                    ListPreference(
+                        type = ListPreferenceType.DROPDOWN_MENU,
+                        value = switchImeModeState,
+                        onValueChange = {
+                            switchImeModeState = it
+                            updateBehavior()
+                        },
+                        values = ImeSwitchMode.entries,
+                        valueToText = {
+                            AnnotatedString(resources.getString(it.resId))
+                        },
+                        title = {
+                            Text(stringResource(R.string.ime_switch_mode))
+                        },
+                        summary = {
+                            Text(stringResource(switchImeModeState.resId))
+                        },
+                        icon = {
+                            Icon(
+                                imageVector = Icons.Outlined.Keyboard,
+                                contentDescription = null,
                             )
                         },
                     )

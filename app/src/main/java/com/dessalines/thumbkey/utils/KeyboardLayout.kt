@@ -3,6 +3,8 @@ package com.dessalines.thumbkey.utils
 import com.dessalines.thumbkey.keyboards.KB_AR_THUMBKEY_LEVANT
 import com.dessalines.thumbkey.keyboards.KB_BG_MESSAGEASE_PHONETIC_SYMBOLS
 import com.dessalines.thumbkey.keyboards.KB_BG_THUMBKEY_SYMBOLS
+import com.dessalines.thumbkey.keyboards.KB_BN_THUMBKEY
+import com.dessalines.thumbkey.keyboards.KB_BN_THUMBKEY_AVRO
 import com.dessalines.thumbkey.keyboards.KB_BR_FR_THUMBKEY
 import com.dessalines.thumbkey.keyboards.KB_BR_FR_THUMBKEY_COMPOSE
 import com.dessalines.thumbkey.keyboards.KB_BR_FR_THUMBKEY_V3
@@ -10,6 +12,7 @@ import com.dessalines.thumbkey.keyboards.KB_BY_THUMBKEY
 import com.dessalines.thumbkey.keyboards.KB_BY_THUMBKEY_SYMBOLS
 import com.dessalines.thumbkey.keyboards.KB_CA_THUMBKEY
 import com.dessalines.thumbkey.keyboards.KB_CZ_MESSAGEASE_PROGRAMMING
+import com.dessalines.thumbkey.keyboards.KB_CZ_TYPESPLIT_FULL
 import com.dessalines.thumbkey.keyboards.KB_DA_THUMBKEY
 import com.dessalines.thumbkey.keyboards.KB_DA_THUMBKEY_MULTILINGUAL
 import com.dessalines.thumbkey.keyboards.KB_DE_MESSAGEASE
@@ -19,6 +22,7 @@ import com.dessalines.thumbkey.keyboards.KB_DE_MESSAGEASE_LEFT_INVERTED_NUMPAD
 import com.dessalines.thumbkey.keyboards.KB_DE_MESSAGEASE_SYMBOLS
 import com.dessalines.thumbkey.keyboards.KB_DE_NORDIC_MESSAGEASE
 import com.dessalines.thumbkey.keyboards.KB_DE_THUMBKEY
+import com.dessalines.thumbkey.keyboards.KB_DE_THUMBKEY_4x3_SYMNUM
 import com.dessalines.thumbkey.keyboards.KB_DE_THUMBKEY_MULTILINGUAL
 import com.dessalines.thumbkey.keyboards.KB_DE_THUMBKEY_SYMBOLS
 import com.dessalines.thumbkey.keyboards.KB_DE_THUMBKEY_SYMNUM
@@ -49,8 +53,11 @@ import com.dessalines.thumbkey.keyboards.KB_EN_HYPER
 import com.dessalines.thumbkey.keyboards.KB_EN_HYPER_SPACE
 import com.dessalines.thumbkey.keyboards.KB_EN_IT_THUMBKEY
 import com.dessalines.thumbkey.keyboards.KB_EN_LA_THUMBKEY
+import com.dessalines.thumbkey.keyboards.KB_EN_MARLIN
 import com.dessalines.thumbkey.keyboards.KB_EN_MESSAGEASE
 import com.dessalines.thumbkey.keyboards.KB_EN_MESSAGEASE_COMPOSE
+import com.dessalines.thumbkey.keyboards.KB_EN_MESSAGEASE_COMPOSE_COMBO
+import com.dessalines.thumbkey.keyboards.KB_EN_MESSAGEASE_COMPOSE_LEFT_FLIPPED_NUMPAD
 import com.dessalines.thumbkey.keyboards.KB_EN_MESSAGEASE_LEFT
 import com.dessalines.thumbkey.keyboards.KB_EN_MESSAGEASE_LEFT_SYMBOLS
 import com.dessalines.thumbkey.keyboards.KB_EN_MESSAGEASE_SYMBOLS
@@ -58,6 +65,7 @@ import com.dessalines.thumbkey.keyboards.KB_EN_MESSAGEASE_SYMBOLS_MODIFIERS
 import com.dessalines.thumbkey.keyboards.KB_EN_MESSAGEASE_SYMBOLS_TWO_HANDS
 import com.dessalines.thumbkey.keyboards.KB_EN_MESSAGEASE_TWO_HANDS
 import com.dessalines.thumbkey.keyboards.KB_EN_MESSAGEASE_WRITER
+import com.dessalines.thumbkey.keyboards.KB_EN_MINNOW
 import com.dessalines.thumbkey.keyboards.KB_EN_MI_THUMBKEY
 import com.dessalines.thumbkey.keyboards.KB_EN_MI_THUMBKEY_SYMBOLS
 import com.dessalines.thumbkey.keyboards.KB_EN_NL_TYPESPLIT
@@ -72,6 +80,8 @@ import com.dessalines.thumbkey.keyboards.KB_EN_QWERTEASE
 import com.dessalines.thumbkey.keyboards.KB_EN_QWERTEASE_TWO_HANDS
 import com.dessalines.thumbkey.keyboards.KB_EN_QWERTYFOUR
 import com.dessalines.thumbkey.keyboards.KB_EN_QWERTYFOUR_COMPOSE
+import com.dessalines.thumbkey.keyboards.KB_EN_RO_HYPER
+import com.dessalines.thumbkey.keyboards.KB_EN_RO_HYPER_SPACE
 import com.dessalines.thumbkey.keyboards.KB_EN_RO_THUMBKEY
 import com.dessalines.thumbkey.keyboards.KB_EN_RSINOA
 import com.dessalines.thumbkey.keyboards.KB_EN_SK_THUMBKEY
@@ -81,14 +91,18 @@ import com.dessalines.thumbkey.keyboards.KB_EN_SYMBOLS_NUMBERS_ARROWS_TWO_HANDS_
 import com.dessalines.thumbkey.keyboards.KB_EN_SYMBOLS_NUMBERS_TWO_HANDS
 import com.dessalines.thumbkey.keyboards.KB_EN_SYMBOLS_TWO_HANDS
 import com.dessalines.thumbkey.keyboards.KB_EN_THUMBKEY
+import com.dessalines.thumbkey.keyboards.KB_EN_THUMBKEY_COMPACT
 import com.dessalines.thumbkey.keyboards.KB_EN_THUMBKEY_COMPOSE
 import com.dessalines.thumbkey.keyboards.KB_EN_THUMBKEY_FLIPPED_NUMPAD
 import com.dessalines.thumbkey.keyboards.KB_EN_THUMBKEY_PROGRAMMING
 import com.dessalines.thumbkey.keyboards.KB_EN_THUMBKEY_PROGRAMMING_EXPANDED
 import com.dessalines.thumbkey.keyboards.KB_EN_THUMBKEY_PROGRAMMING_WIDE
+import com.dessalines.thumbkey.keyboards.KB_EN_THUMBKEY_SHIFT
 import com.dessalines.thumbkey.keyboards.KB_EN_THUMBKEY_SYMBOLS
 import com.dessalines.thumbkey.keyboards.KB_EN_THUMBKEY_WIDE
+import com.dessalines.thumbkey.keyboards.KB_EN_THUMBKEY_WIDE_COMPOSE
 import com.dessalines.thumbkey.keyboards.KB_EN_THUMBKEY_WORDS
+import com.dessalines.thumbkey.keyboards.KB_EN_THUMBKEY_WORDS_SHIFT
 import com.dessalines.thumbkey.keyboards.KB_EN_THUMBKEY_WORDS_SYMBOLS
 import com.dessalines.thumbkey.keyboards.KB_EN_THUMBKEY_WORDS_SYMBOLS_DUAL
 import com.dessalines.thumbkey.keyboards.KB_EN_THUMBKEY_WRITER
@@ -96,6 +110,7 @@ import com.dessalines.thumbkey.keyboards.KB_EN_TWO_HANDS
 import com.dessalines.thumbkey.keyboards.KB_EN_TYPESPLIT
 import com.dessalines.thumbkey.keyboards.KB_EN_TYPESPLIT_PROGRAMMING
 import com.dessalines.thumbkey.keyboards.KB_EN_TYPESPLIT_SHORT
+import com.dessalines.thumbkey.keyboards.KB_EN_WHALE
 import com.dessalines.thumbkey.keyboards.KB_EO_CYRILLIC_THUMBKEY
 import com.dessalines.thumbkey.keyboards.KB_EO_EN_DE_THUMBKEY
 import com.dessalines.thumbkey.keyboards.KB_ES_CA_MESSAGEASE
@@ -120,6 +135,7 @@ import com.dessalines.thumbkey.keyboards.KB_FR_EN_FRAPPE_FLUIDE_V1_CONTROL_LEFT_
 import com.dessalines.thumbkey.keyboards.KB_FR_EN_FRAPPE_FLUIDE_V1_LEFT_HANDED
 import com.dessalines.thumbkey.keyboards.KB_FR_EN_FRAPPE_FLUIDE_V1_LEFT_HANDED_CONTROL_LEFT_SIDE
 import com.dessalines.thumbkey.keyboards.KB_FR_MESSAGEASE
+import com.dessalines.thumbkey.keyboards.KB_FR_MESSAGEASE_LEFT_FLIPPED_NUMPAD
 import com.dessalines.thumbkey.keyboards.KB_FR_THUMBKEY_V1
 import com.dessalines.thumbkey.keyboards.KB_FR_THUMBKEY_V2
 import com.dessalines.thumbkey.keyboards.KB_FR_THUMBKEY_V3
@@ -162,6 +178,7 @@ import com.dessalines.thumbkey.keyboards.KB_LT_THUMBKEY
 import com.dessalines.thumbkey.keyboards.KB_LV_LTG_THUMBKEY
 import com.dessalines.thumbkey.keyboards.KB_MATH_THUMBKEY
 import com.dessalines.thumbkey.keyboards.KB_MY_THUMBKEY
+import com.dessalines.thumbkey.keyboards.KB_MY_WHALE
 import com.dessalines.thumbkey.keyboards.KB_NL_THUMBKEY
 import com.dessalines.thumbkey.keyboards.KB_NL_TYPESPLIT
 import com.dessalines.thumbkey.keyboards.KB_NO_THUMBKEY
@@ -178,6 +195,7 @@ import com.dessalines.thumbkey.keyboards.KB_PT_THUMBKEY
 import com.dessalines.thumbkey.keyboards.KB_PT_TYPESPLIT
 import com.dessalines.thumbkey.keyboards.KB_RU_ARTI
 import com.dessalines.thumbkey.keyboards.KB_RU_HYPER
+import com.dessalines.thumbkey.keyboards.KB_RU_HYPER_SPACE
 import com.dessalines.thumbkey.keyboards.KB_RU_MESSAGEASE
 import com.dessalines.thumbkey.keyboards.KB_RU_MESSAGEASE_SYMBOLS
 import com.dessalines.thumbkey.keyboards.KB_RU_MESSAGEASE_WRITER
@@ -201,6 +219,7 @@ import com.dessalines.thumbkey.keyboards.KB_TH_THUMBKEY
 import com.dessalines.thumbkey.keyboards.KB_TH_THUMBKEY_KHAM_CHUEAM
 import com.dessalines.thumbkey.keyboards.KB_TOK_SITELEN_THUMBKEY_EMOJI
 import com.dessalines.thumbkey.keyboards.KB_TOK_THUMBKEY
+import com.dessalines.thumbkey.keyboards.KB_TOK_THUMBKEY_LETTERS_SHIFT
 import com.dessalines.thumbkey.keyboards.KB_TR_ARTI
 import com.dessalines.thumbkey.keyboards.KB_TR_THUMBKEY
 import com.dessalines.thumbkey.keyboards.KB_TR_TYPESPLIT
@@ -310,7 +329,7 @@ enum class KeyboardLayout(
     FIMessagEase(KB_FI_MESSAGEASE), // suomi messagease
     ENDAThumbKeySymbols(KB_EN_DA_THUMBKEY_SYMBOLS), // english dansk thumb-key symbols
     FIEEMessagEase(KB_FI_EE_MESSAGEASE_SYMBOLS), // suomi eesti messagease
-    ENPLThumbkey(KB_EN_PL_THUMBKEY), // english polski thumb-key
+    ENPLThumbKey(KB_EN_PL_THUMBKEY), // english polski thumb-key
     BGMessagEasePhoneticSymbols(
         KB_BG_MESSAGEASE_PHONETIC_SYMBOLS,
     ), // bulgarian messagease phonetic symbols
@@ -351,14 +370,14 @@ enum class KeyboardLayout(
     ENThumbKeyWide(KB_EN_THUMBKEY_WIDE), // english thumb-key wide
     ENQBased(KB_EN_QBASED), // english qbased
     ENQBasedLeft(KB_EN_QBASED_LEFT), // english qbased left-handed
-    DEThumbkeySymbols(KB_DE_THUMBKEY_SYMBOLS), // deutsch thumb-key symbols
+    DEThumbKeySymbols(KB_DE_THUMBKEY_SYMBOLS), // deutsch thumb-key symbols
     ENQwertyFourCompose(KB_EN_QWERTYFOUR_COMPOSE), // english qwertyfour compose
     ENThumbKeyWriter(KB_EN_THUMBKEY_WRITER), // english thumb-key writer
     JAKanaThumbKey(KB_JA_KANA_THUMBKEY), // japanese kana thumb-key
     FAThumbKeySamsung(KB_FA_THUMBKEY_SAMSUNG), // فارسی thumb-key samsung
-    DEENThumbkeyAE(KB_EN_DE_THUMBKEY_AE), // english deutsch thumb-key +æ
+    DEENThumbKeyAE(KB_EN_DE_THUMBKEY_AE), // english deutsch thumb-key +æ
     SKThumbKeyV3(KB_SK_THUMBKEY_V3), // slovenčina thumb-key v3
-    EuropeThumbkey(KB_EUROPE_THUMBKEY), // european thumb-key
+    EuropeThumbKey(KB_EUROPE_THUMBKEY), // european thumb-key
     ENMessagEaseSymbolsTwoHands(
         KB_EN_MESSAGEASE_SYMBOLS_TWO_HANDS,
     ), // english messagease symbols two-hands
@@ -373,7 +392,7 @@ enum class KeyboardLayout(
     ENTypeSplitShort(KB_EN_TYPESPLIT_SHORT), // english type-split short
     PLTypeSplitV1(KB_PL_TYPESPLIT_V1), // polski type-split v1
     PLTypeSplitSymbolsV1(KB_PL_TYPESPLIT_SYMBOLS_V1), // polski symbols type-split v1
-    GlagoliticThumbkey(KB_GLAGOLITIC_THUMBKEY), // ⰳⰾⰰⰳⱁⰾⰻⱌⰰ thumb-key
+    GlagoliticThumbKey(KB_GLAGOLITIC_THUMBKEY), // ⰳⰾⰰⰳⱁⰾⰻⱌⰰ thumb-key
     ENColumnar(KB_EN_COLUMNAR), // english qwerty-columnar
     ENColumnarQuick(KB_EN_COLUMNAR_QUICK), // english qwerty-columnar quick
     UKBYRUThumbKey(KB_UK_BY_RU_THUMBKEY), // українська беларуская русский thumb-key
@@ -385,7 +404,7 @@ enum class KeyboardLayout(
     ENNLTypeSplit(KB_EN_NL_TYPESPLIT), // english nederlands type-split
     HIThumbKeyExtended(KB_HI_THUMBKEY_EXTENDED), // हिन्दी thumb-key extended
     FRThumbKeyV3(KB_FR_THUMBKEY_V3), // français thumb-key v3
-    DEThumbkeySymNum(KB_DE_THUMBKEY_SYMNUM), // deutsch thumb-key symnum
+    DEThumbKeySymNum(KB_DE_THUMBKEY_SYMNUM), // deutsch thumb-key symnum
     TRTypeSplit(KB_TR_TYPESPLIT), // türkçe type-split
     ENDvorakWide(KB_EN_DVORAK_WIDE), // english dvorak wide
     ENDvorakWideCompose(KB_EN_DVORAK_WIDE_COMPOSE), // english dvorak wide compose
@@ -407,7 +426,7 @@ enum class KeyboardLayout(
     DEThumbKeyWords(KB_DE_THUMBKEY_WORDS), // deutsch thumb-key words
     RUMessageOwl(KB_RU_MESSAGE_OWL), // русский owl
     DETypeSplitImproved(KB_DE_TYPESPLIT_IMPROVED), // deutsch type-split improved
-    ENThumbkeyFlippedNumpad(
+    ENThumbKeyFlippedNumpad(
         KB_EN_THUMBKEY_FLIPPED_NUMPAD,
     ), // english thumb-key with a flipped numpad layout
     GRThumbKeyNormal(KB_GRNORM_THUMBKEY), // ελληνικά normal thumb-key
@@ -456,4 +475,23 @@ enum class KeyboardLayout(
     HUHungram(KB_HU_HUNGRAM), // magyar hungram
     SAHThumbKeyWriter(KB_SAH_THUMBKEY_WRITER), // сахалыы writer thumb-key
     DETypeSplitSuave(KB_DE_TYPESPLIT_SUAVE), // deutsch type-split suave
+    ENThumbKeyWideCompose(KB_EN_THUMBKEY_WIDE_COMPOSE), // english thumb-key wide compose
+    ENMessagEaseComposeFlipped(KB_EN_MESSAGEASE_COMPOSE_LEFT_FLIPPED_NUMPAD), // english messagease compose flipped
+    FRMessagEaseFlipped(KB_FR_MESSAGEASE_LEFT_FLIPPED_NUMPAD), // français messagease left-handed flipped
+    BNThumbKey(KB_BN_THUMBKEY), // বাংলা thumb-key
+    ENWhale(KB_EN_WHALE), // english whale
+    ENMarlin(KB_EN_MARLIN), // english marlin
+    ENMinnow(KB_EN_MINNOW), // english minnow
+    MYWhale(KB_MY_WHALE), // myanmar whale
+    ENThumbKeyCompact(KB_EN_THUMBKEY_COMPACT), // english thumb-key compact
+    ENThumbKeyWordsShift(KB_EN_THUMBKEY_WORDS_SHIFT), // english thumb-key words shift
+    ENROHyper(KB_EN_RO_HYPER), // english română hyper
+    ENROHyperSpace(KB_EN_RO_HYPER_SPACE), // english română hyper space
+    RUHyperSpace(KB_RU_HYPER_SPACE), // русский hyper space
+    ENThumbKeyShift(KB_EN_THUMBKEY_SHIFT), // english thumb-key shift
+    TOKThumbKeyLettersShift(KB_TOK_THUMBKEY_LETTERS_SHIFT), // toki pona thumb-key letters shift
+    CZTypeSplit(KB_CZ_TYPESPLIT_FULL), // čeština type-split
+    ENMessagEaseComposeCombo(KB_EN_MESSAGEASE_COMPOSE_COMBO), // english messagease compose combo
+    BNThumbKeyAvro(KB_BN_THUMBKEY_AVRO), // বাংলা avro thumb-key
+    DEThumbKey4x3SymNum(KB_DE_THUMBKEY_4x3_SYMNUM), // deutsch thumb-key 4x3 symnum",
 }

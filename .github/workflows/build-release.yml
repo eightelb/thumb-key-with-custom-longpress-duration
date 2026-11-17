@@ -1,0 +1,61 @@
+name: Build signed release APK
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: gradle
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install Android build tools
+        run: sdkmanager "platforms;android-37" "build-tools;36.0.0"
+
+      - name: Create temporary signing keystore
+        run: |
+          keytool -genkeypair -v \
+            -keystore "$RUNNER_TEMP/release.keystore" \
+            -storepass temporary-password \
+            -keypass temporary-password \
+            -alias release \
+            -keyalg RSA \
+            -keysize 2048 \
+            -validity 10000 \
+            -dname "CN=Temporary CI Signing,O=Thumb-Key,C=US"
+
+      - name: Build release APK
+        run: ./gradlew assembleRelease
+
+      - name: Sign release APK
+        run: |
+          "$ANDROID_HOME/build-tools/36.0.0/apksigner" sign \
+            --ks "$RUNNER_TEMP/release.keystore" \
+            --ks-key-alias release \
+            --ks-pass pass:temporary-password \
+            --key-pass pass:temporary-password \
+            --out app/build/outputs/apk/release/app-release-signed.apk \
+            app/build/outputs/apk/release/app-release-unsigned.apk
+          "$ANDROID_HOME/build-tools/36.0.0/apksigner" verify --verbose app/build/outputs/apk/release/app-release-signed.apk
+
+      - name: Upload signed release APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: thumb-key-release-apk
+          path: app/build/outputs/apk/release/app-release-signed.apk
+          if-no-files-found: error

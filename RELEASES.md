@@ -1,3 +1,162 @@
+## What's Changed in 5.1.22
+
+- Add README example that adds compose combo key by @matthijskooijman in [#2084](https://github.com/dessalines/thumb-key/pull/2084)
+- Adding de_4x3_symnum by @dessalines in [#2077](https://github.com/dessalines/thumb-key/pull/2077)
+
+## New Contributors
+
+- @matthijskooijman made their first contribution in [#2084](https://github.com/dessalines/thumb-key/pull/2084)
+
+**Full Changelog**: https://github.com/dessalines/thumb-key/compare/5.1.21...5.1.22
+
+## What's Changed in 5.1.21
+
+- Hindi extended: Add Dandas, remove duplicated pipe by @salsifis in [#2072](https://github.com/dessalines/thumb-key/pull/2072)
+- Add Up and Down key actions to key modifications by @saimskywalker in [#2070](https://github.com/dessalines/thumb-key/pull/2070)
+- Prevent sketch hints from resizing the drawing pad by @mvanhorn in [#2066](https://github.com/dessalines/thumb-key/pull/2066)
+- Add bangla thumb-key avro layout (Avro phonetic transliteration) by @Nyctophilia58 in [#2064](https://github.com/dessalines/thumb-key/pull/2064)
+- Delete apostrophe before Chandrabindu in Devanagari extended layout by @salsifis in [#2065](https://github.com/dessalines/thumb-key/pull/2065)
+
+## New Contributors
+
+- @saimskywalker made their first contribution in [#2070](https://github.com/dessalines/thumb-key/pull/2070)
+- @Nyctophilia58 made their first contribution in [#2064](https://github.com/dessalines/thumb-key/pull/2064)
+
+**Full Changelog**: https://github.com/dessalines/thumb-key/compare/5.1.20...5.1.21
+
+## What's Changed in 5.1.20
+
+- Add ToggleHideLetters as a key modification action by @Xander-AJ in [#2062](https://github.com/dessalines/thumb-key/pull/2062)
+- Restore Android IME settings entry by @mvanhorn in [#2060](https://github.com/dessalines/thumb-key/pull/2060)
+- Match layout search against the layout title by @Xander-AJ in [#2055](https://github.com/dessalines/thumb-key/pull/2055)
+- Remove freedroidwarn by @dessalines in [#2051](https://github.com/dessalines/thumb-key/pull/2051)
+
+## New Contributors
+
+- @Xander-AJ made their first contribution in [#2062](https://github.com/dessalines/thumb-key/pull/2062)
+
+**Full Changelog**: https://github.com/dessalines/thumb-key/compare/5.1.19...5.1.20
+
+## What's Changed in 5.1.19
+
+- Add Theme Magma by @DavidAJL in [#2050](https://github.com/dessalines/thumb-key/pull/2050)
+- Add an input method switching mode setting by @lightrush in [#2041](https://github.com/dessalines/thumb-key/pull/2041)
+- Override the caps-lock legend from key modifications by @mvanhorn in [#2039](https://github.com/dessalines/thumb-key/pull/2039)
+- Spell keyboard layout identifiers ThumbKey by @mvanhorn in [#2033](https://github.com/dessalines/thumb-key/pull/2033)
+
+## New Contributors
+
+- @DavidAJL made their first contribution in [#2050](https://github.com/dessalines/thumb-key/pull/2050)
+- @lightrush made their first contribution in [#2041](https://github.com/dessalines/thumb-key/pull/2041)
+- @mvanhorn made their first contribution in [#2039](https://github.com/dessalines/thumb-key/pull/2039)
+
+**Full Changelog**: https://github.com/dessalines/thumb-key/compare/5.1.18...5.1.19
+
+## What's Changed in 5.1.18
+
+- Add sketch mode by @Toldry in [#2023](https://github.com/dessalines/thumb-key/pull/2023)
+- Add search and pinned selection to the layouts dialog by @Toldry in [#2020](https://github.com/dessalines/thumb-key/pull/2020)
+- Allow StartComposeCombo in key modifications by @sarefo in [#2021](https://github.com/dessalines/thumb-key/pull/2021)
+- Fix compose sequence committed twice when the keyboard hides by @sarefo in [#2022](https://github.com/dessalines/thumb-key/pull/2022)
+- Removing google play links. by @dessalines
+- Enable CapsLock feature on TR Arti + RU Arti layouts by @alerque in [#2013](https://github.com/dessalines/thumb-key/pull/2013)
+- Add the english messagease compose combo layout by @sarefo in [#1999](https://github.com/dessalines/thumb-key/pull/1999)
+
+**Full Changelog**: https://github.com/dessalines/thumb-key/compare/5.1.17...5.1.18
+
+## What's Changed in 5.1.17
+
+- added a font size between SMALL and LARGE named MEDIUM by @LaraSQP in [#1989](https://github.com/dessalines/thumb-key/pull/1989)
+- Added layout CZTypeSplit by @krysded in [#1991](https://github.com/dessalines/thumb-key/pull/1991)
+- Add a desktop-style compose key mechanism by @sarefo in [#1998](https://github.com/dessalines/thumb-key/pull/1998)
+- Switch " with z on English Romanian Hyper Space layout by @Lucariowu in [#1982](https://github.com/dessalines/thumb-key/pull/1982)
+
+## New Contributors
+
+- @LaraSQP made their first contribution in [#1989](https://github.com/dessalines/thumb-key/pull/1989)
+- @krysded made their first contribution in [#1991](https://github.com/dessalines/thumb-key/pull/1991)
+- @sarefo made their first contribution in [#1998](https://github.com/dessalines/thumb-key/pull/1998)
+
+**Full Changelog**: https://github.com/dessalines/thumb-key/compare/5.1.16...5.1.17
+
+## What's Changed in 5.1.16
+
+- Adding ENThumbkeyShift and TOKThumbkeyLettersShift by @dessalines in [#1980](https://github.com/dessalines/thumb-key/pull/1980)
+- Fixing some lints by @dessalines in [#1979](https://github.com/dessalines/thumb-key/pull/1979)
+- Improve accents in BRFRThumbKeyV3 by @zeecho in [#1975](https://github.com/dessalines/thumb-key/pull/1975)
+- Add Russian hyper space keyboard layout by @Lucariowu in [#1965](https://github.com/dessalines/thumb-key/pull/1965)
+- Add English based Romanian hyper and hyper space keyboard layouts by @Lucariowu in [#1964](https://github.com/dessalines/thumb-key/pull/1964)
+
+## New Contributors
+
+- @Lucariowu made their first contribution in [#1965](https://github.com/dessalines/thumb-key/pull/1965)
+
+**Full Changelog**: https://github.com/dessalines/thumb-key/compare/5.1.15...5.1.16
+
+## What's Changed in 5.1.15
+
+- Add delete character after cursor action by @agm-9 in [#1963](https://github.com/dessalines/thumb-key/pull/1963)
+
+**Full Changelog**: https://github.com/dessalines/thumb-key/compare/5.1.14...5.1.15
+
+## What's Changed in 5.1.14
+
+- Add option to switch to letters after a space in numeric mode by @agm-9 in [#1955](https://github.com/dessalines/thumb-key/pull/1955)
+- Adding ENThumbKeyWordsShift by @dessalines in [#1960](https://github.com/dessalines/thumb-key/pull/1960)
+
+## New Contributors
+
+- @agm-9 made their first contribution in [#1955](https://github.com/dessalines/thumb-key/pull/1955)
+
+**Full Changelog**: https://github.com/dessalines/thumb-key/compare/5.1.13...5.1.14
+
+## What's Changed in 5.1.13
+
+- Adding EN-thumbkey compact (extra keys moved into 3x3 grid) by @dessalines in [#1949](https://github.com/dessalines/thumb-key/pull/1949)
+- added Myanmar WHALE Layout by @khantNZaw in [#1947](https://github.com/dessalines/thumb-key/pull/1947)
+- Deepseek layout fixes - Optimizing minnow and marlin by @dessalines in [#1948](https://github.com/dessalines/thumb-key/pull/1948)
+- Deepseek layout fixes 1 by @dessalines in [#1944](https://github.com/dessalines/thumb-key/pull/1944)
+
+**Full Changelog**: https://github.com/dessalines/thumb-key/compare/5.1.12...5.1.13
+
+## What's Changed in 5.1.12
+
+- Adding Deepseek-generated 5x5 (whale) and 4x4 (marlin) layouts by @dessalines in [#1942](https://github.com/dessalines/thumb-key/pull/1942)
+- Update MYThumbKey.kt by @khantNZaw in [#1939](https://github.com/dessalines/thumb-key/pull/1939)
+- Update MYThumbKey.kt by @khantNZaw in [#1938](https://github.com/dessalines/thumb-key/pull/1938)
+- Update MYThumbKey.kt by @khantNZaw in [#1937](https://github.com/dessalines/thumb-key/pull/1937)
+- Update MYThumbKey.kt by @khantNZaw in [#1935](https://github.com/dessalines/thumb-key/pull/1935)
+- Add Bengali keyboard layout by @Shihab-glitch in [#1931](https://github.com/dessalines/thumb-key/pull/1931)
+
+## New Contributors
+
+- @khantNZaw made their first contribution in [#1939](https://github.com/dessalines/thumb-key/pull/1939)
+- @Shihab-glitch made their first contribution in [#1931](https://github.com/dessalines/thumb-key/pull/1931)
+
+**Full Changelog**: https://github.com/dessalines/thumb-key/compare/5.1.11...5.1.12
+
+## What's Changed in 5.1.11
+
+- Adding 2 flipped layouts. by @dessalines in [#1921](https://github.com/dessalines/thumb-key/pull/1921)
+
+**Full Changelog**: https://github.com/dessalines/thumb-key/compare/5.1.10...5.1.11
+
+## What's Changed in 5.1.10
+
+- Add Thumb-Key Wide Compose layout by @sprinklednights in [#1906](https://github.com/dessalines/thumb-key/pull/1906)
+- Fix database import/export by @RGBCube in [#1894](https://github.com/dessalines/thumb-key/pull/1894)
+- DE TypeSplit Suave Layout by @sp1r1t in [#1890](https://github.com/dessalines/thumb-key/pull/1890)
+- Add Turkish ı and İ to the European layout (#1884) by @ratajs in [#1888](https://github.com/dessalines/thumb-key/pull/1888)
+
+## New Contributors
+
+- @sprinklednights made their first contribution in [#1906](https://github.com/dessalines/thumb-key/pull/1906)
+- @RGBCube made their first contribution in [#1894](https://github.com/dessalines/thumb-key/pull/1894)
+- @sp1r1t made their first contribution in [#1890](https://github.com/dessalines/thumb-key/pull/1890)
+- @ratajs made their first contribution in [#1888](https://github.com/dessalines/thumb-key/pull/1888)
+
+**Full Changelog**: https://github.com/dessalines/thumb-key/compare/5.1.9...5.1.10
+
 ## What's Changed in 5.1.9
 
 - New layout for Sakha (sah) language based on Thumb-Key Writer by @kyraha in [#1879](https://github.com/dessalines/thumb-key/pull/1879)
@@ -153,7 +312,7 @@
 - Don't bother writing fastlane changelog. by @dessalines in [#1669](https://github.com/dessalines/thumb-key/pull/1669)
 - fix: follow title format for FAThumbKey.kt by @pxeemo in [#1667](https://github.com/dessalines/thumb-key/pull/1667)
 - Fix fastlane changelog by @dessalines in [#1664](https://github.com/dessalines/thumb-key/pull/1664)
-- Update RUHyper.kt by @bjarjfff in [#1646](https://github.com/dessalines/thumb-key/pull/1646)
+- Update RUHyper.kt by @dacunubi in [#1646](https://github.com/dessalines/thumb-key/pull/1646)
 
 **Full Changelog**: https://github.com/dessalines/thumb-key/compare/5.0.10...5.0.11
 
@@ -166,13 +325,13 @@
 - Standard japanese keyboard by @K0baU in [#1630](https://github.com/dessalines/thumb-key/pull/1630)
 - add Wurstfinger as related project by @cl445 in [#1632](https://github.com/dessalines/thumb-key/pull/1632)
 - Fixed incorrect swipetype in center key on KRThumbKey by @Hate9 in [#1621](https://github.com/dessalines/thumb-key/pull/1621)
-- Update RUHyper.kt by @bjarjfff in [#1616](https://github.com/dessalines/thumb-key/pull/1616)
+- Update RUHyper.kt by @dacunubi in [#1616](https://github.com/dessalines/thumb-key/pull/1616)
 
 ## New Contributors
 
 - @DeBestTrap made their first contribution in [#1640](https://github.com/dessalines/thumb-key/pull/1640)
 - @cl445 made their first contribution in [#1632](https://github.com/dessalines/thumb-key/pull/1632)
-- @bjarjfff made their first contribution in [#1616](https://github.com/dessalines/thumb-key/pull/1616)
+- @dacunubi made their first contribution in [#1616](https://github.com/dessalines/thumb-key/pull/1616)
 
 **Full Changelog**: https://github.com/dessalines/thumb-key/compare/5.0.9...5.0.10
 
@@ -293,6 +452,8 @@
 - Overhaul migrations to avoid SQLite & Room limitations by @alerque
 - Fix long press numeric key yaml by @jm355 in [#1453](https://github.com/dessalines/thumb-key/pull/1453)
 - Add FRENFrappeFluideV1 in [#1450](https://github.com/dessalines/thumb-key/pull/1450)
+- Deconflate size vs. width vs. height and save user input values by @alerque
+- Add option to calculate key size based on available screen width by @alerque
 
 ## New Contributors
 
@@ -307,8 +468,6 @@
 - Implement 3-row emoji picker for wide layout keyboards by @alerque in [#1422](https://github.com/dessalines/thumb-key/pull/1422)
 - Make emoji keyboard row count automatic based on main layout by @alerque
 - Implement 3-row emoji picker for wide layout keyboards by @alerque
-- Deconflate size vs. width vs. height and save user input values by @alerque
-- Add option to calculate key size based on available screen width by @alerque
 - Small follow up tweaks to TR+ keyboard by @alerque in [#1421](https://github.com/dessalines/thumb-key/pull/1421)
 - Add new TR+ keyboard with EN+TR language and typographic symbols by @alerque in [#1420](https://github.com/dessalines/thumb-key/pull/1420)
 - ntfy message fix. by @dessalines in [#1419](https://github.com/dessalines/thumb-key/pull/1419)
@@ -541,7 +700,7 @@
 
 ## What's Changed in 4.0.14
 
-- Update NumericWide ° \* # by @lyluqo in [#1227](https://github.com/dessalines/thumb-key/pull/1227)
+- Update NumericWide ° * # by @lyluqo in [#1227](https://github.com/dessalines/thumb-key/pull/1227)
 - Fix swipe types of NumericWide by @lyluqo in [#1226](https://github.com/dessalines/thumb-key/pull/1226)
 - Fix dvorak compose ´ by @lyluqo in [#1225](https://github.com/dessalines/thumb-key/pull/1225)
 
@@ -1401,7 +1560,7 @@
 - Add keyboard bg_phonetic_messagease by @pavlov-p in [#660](https://github.com/dessalines/thumb-key/pull/660)
 - Adding english polski thumbkey keyboard. Fixes #654 by @dessalines in [#659](https://github.com/dessalines/thumb-key/pull/659)
 - Finnish/Estonian messageease style layout by @Eemilp in [#639](https://github.com/dessalines/thumb-key/pull/639)
-- Typos by @5atoshiNakamoto in [#644](https://github.com/dessalines/thumb-key/pull/644)
+- Typos by @5atoshiNakamoto
 - Update strings.xml (typo) by @ligurio in [#638](https://github.com/dessalines/thumb-key/pull/638)
 - show locale currency bottom-right to 1 in [#636](https://github.com/dessalines/thumb-key/pull/636)
 - Adding release notes. by @dessalines
@@ -1410,7 +1569,7 @@
 
 - @pavlov-p made their first contribution in [#660](https://github.com/dessalines/thumb-key/pull/660)
 - @Eemilp made their first contribution in [#639](https://github.com/dessalines/thumb-key/pull/639)
-- @5atoshiNakamoto made their first contribution in [#644](https://github.com/dessalines/thumb-key/pull/644)
+- @5atoshiNakamoto made their first contribution
 - @ligurio made their first contribution in [#638](https://github.com/dessalines/thumb-key/pull/638)
 
 **Full Changelog**: https://github.com/dessalines/thumb-key/compare/2.6.10...2.6.11
@@ -1967,12 +2126,16 @@
 - Merge branch 'main' into main by @breversa
 - Update MessageEaseFR.kt by @cosminribo in [#256](https://github.com/dessalines/thumb-key/pull/256)
 - Adding release notes. by @dessalines
+- Update ThumbKeyFRv2.kt by @breversa
+- Update ThumbKeyFRv2.kt by @breversa
+- Create ThumbKeyFRv2.kt by @breversa
 
 ## New Contributors
 
 - @FranciscoTrigo made their first contribution
 - @K0baU made their first contribution
 - @last5bits made their first contribution
+- @breversa made their first contribution
 - @cosminribo made their first contribution in [#256](https://github.com/dessalines/thumb-key/pull/256)
 - @Falcarragh made their first contribution
 
@@ -2010,14 +2173,7 @@
 - Modified symbols so that they match messageEase
 - Finishing adding georgian keyboard. by @dessalines
 - Add Georgian keyboard layout in [#240](https://github.com/dessalines/thumb-key/pull/240)
-- Update ThumbKeyFRv2.kt by @breversa
-- Update ThumbKeyFRv2.kt by @breversa
-- Create ThumbKeyFRv2.kt by @breversa
 - Adding release notes. by @dessalines
-
-## New Contributors
-
-- @breversa made their first contribution
 
 **Full Changelog**: https://github.com/dessalines/thumb-key/compare/1.3.0...1.4.0
 
@@ -2114,6 +2270,7 @@
 - Changed z position by @morellik in [#193](https://github.com/dessalines/thumb-key/pull/193)
 - Adding release notes. by @dessalines
 - Merge branch 'layout_order_fix' by @dessalines
+- Fixing wrong layouts chosen after adding new ones. Fixes #167 by @dessalines in [#188](https://github.com/dessalines/thumb-key/pull/188)
 
 ## New Contributors
 
@@ -2125,7 +2282,6 @@
 
 - Removing comment. by @dessalines
 - Fixing wrong layouts chosen after adding new ones. Fixes #167 by @dessalines
-- Fixing wrong layouts chosen after adding new ones. Fixes #167 by @dessalines in [#188](https://github.com/dessalines/thumb-key/pull/188)
 - Send apostrophe back where it came from 🔫 by @domportera in [#185](https://github.com/dessalines/thumb-key/pull/185)
 - Disable spacebar multitap option by @dessalines in [#182](https://github.com/dessalines/thumb-key/pull/182)
 - Add borderless keys option. Fixes #158 by @dessalines in [#181](https://github.com/dessalines/thumb-key/pull/181)
@@ -2327,7 +2483,7 @@
 
 - Adding a minimum swipe length. Fixes #14 by @dessalines in [#22](https://github.com/dessalines/thumb-key/pull/22)
 - Changing default space next tap action to comma. #18 by @dessalines in [#20](https://github.com/dessalines/thumb-key/pull/20)
-- Swapping out \* for - , which is more common. Fixes #13 by @dessalines in [#19](https://github.com/dessalines/thumb-key/pull/19)
+- Swapping out * for - , which is more common. Fixes #13 by @dessalines in [#19](https://github.com/dessalines/thumb-key/pull/19)
 - Adding capitalize instructions. Fixes #16 by @dessalines
 - Fixing fastlane full description. by @dessalines
 

@@ -7,7 +7,7 @@
     <string name="dynamic">Динамично</string>
     <string name="green">Зелено</string>
     <string name="pink">Розово</string>
-    <string name="matrix">Матрицата-амолед</string>
+    <string name="matrix">Matrix-AMOLED</string>
     <string name="srcery">Srcery</string>
     <string name="blue">Синьо</string>
     <string name="center">В центъра</string>
@@ -20,7 +20,7 @@
     <string name="support">Поддръжка</string>
     <string name="issue_tracker">Бъг тракер</string>
     <string name="developer_matrix_chatroom">Matrix чат стая за разработчици</string>
-    <string name="donate_to_thumbkey">Направете дарение към Thumb-Key</string>
+    <string name="donate_to_thumbkey">Направете дарение за Thumb-Key</string>
     <string name="social">Социални</string>
     <string name="join_c_thumbkey">Присъединете се към c/thumbkey</string>
     <string name="follow_me_mastodon">Последвайте ме в Mastodon</string>
@@ -49,7 +49,7 @@
     <string name="select_thumbkey">Изберете Thumb-Key</string>
     <string name="finish_setup">Завършете настройването</string>
     <string name="hide_letters">Скриване на буквите</string>
-    <string name="spacebar_multitaps">Интервал многокр-докосв.</string>
+    <string name="spacebar_multitaps">Многокр. докосв. на интервала</string>
     <string name="twilight">Здрач</string>
     <string name="behavior">Поведение</string>
     <string name="key_non_square">Използване на неквадратни клавиши</string>
@@ -140,4 +140,29 @@
     <string name="other">Други</string>
     <string name="show_on_screen_keyboard">Показване на екранната клавиатура</string>
     <string name="show_on_screen_keyboard_description">Показване на екранната клавиатура при използване на физическа клавиатура</string>
+    <string name="switch_to_letters_after_space">Превключване към букви след интервал</string>
+    <string name="switch_to_letters_after_space_description">Връщане към буквената клавиатура след въвеждане на интервал в цифров режим</string>
+    <string name="slide_hold_enable">Движение на курсора с плъзгане и задържане</string>
+    <string name="slide_hold_description">Плъзнете и задръжте за повтарящо се движение на курсора, плъзнете-върнете-задръжте за движение по думи. Изтриване: плъзнете и задръжте за повтарящо се изтриване, плъзнете-върнете-задръжте за изтриване по думи.</string>
+    <string name="database_operation_failed">Неуспешна операция: %1$s</string>
+    <string name="magma">Магма</string>
+    <string name="ime_switch_mode">Превключване между методите за въвеждане</string>
+    <string name="ime_switch_mode_picker">Показване на избора на метод за въвеждане</string>
+    <string name="ime_switch_mode_previous">Превключване към последния използван</string>
+    <string name="ime_switch_mode_next">Превключване към следващия в списъка</string>
+    <string name="search_layouts">Търсене на подредби</string>
+    <string name="clear_search">Изчистване на търсенето</string>
+    <string name="no_layouts_found">Няма намерени подредби</string>
+    <string name="sketch_hint">Нарисувайте знак. Докоснете или плъзнете клавиш отдолу, за да го въведете. Задръжте или плъзнете и върнете за сходни знаци.</string>
+    <string name="sketch_loading">Зареждане на разпознаването на ръкопис…</string>
+    <string name="sketch_load_failed">Разпознаването на ръкопис не можа да се зареди</string>
+    <string name="sketch_look_alikes">Сходни на %1$s · %2$d</string>
+    <string name="sketch_back">Назад</string>
+    <string name="sketch_all_candidates">Всички варианти · %1$d</string>
+    <string name="sketch_key_position">клавиш %1$d %2$s</string>
+    <string name="sketch_search_hint">Търсене</string>
+    <string name="sketch_clear_search">Изчистване на търсенето</string>
+    <string name="sketch_no_matches">Няма съвпадащи варианти</string>
+    <string name="handwriting_recognition">Разпознаване на ръкопис</string>
+    <string name="handwriting_recognition_summary">Режимът за рисуване разпознава знаци чрез glyphsketch локално на устройството.</string>
 </resources>

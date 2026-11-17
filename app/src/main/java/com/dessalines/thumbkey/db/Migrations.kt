@@ -3,6 +3,15 @@ package com.dessalines.thumbkey.db
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
+private fun SupportSQLiteDatabase.appSettingsColumns(): Set<String> =
+    buildSet {
+        query("PRAGMA table_info(AppSettings)").use { cursor ->
+            while (cursor.moveToNext()) {
+                add(cursor.getString(1))
+            }
+        }
+    }
+
 val MIGRATION_1_2 =
     object : Migration(1, 2) {
         override fun migrate(db: SupportSQLiteDatabase) {
@@ -17,6 +26,9 @@ val MIGRATION_27_28 =
         override fun migrate(db: SupportSQLiteDatabase) {
             db.execSQL(
                 "ALTER TABLE AppSettings ADD COLUMN long_press_duration INTEGER NOT NULL DEFAULT $DEFAULT_LONG_PRESS_DURATION",
+            )
+            db.execSQL(
+                "ALTER TABLE AppSettings ADD COLUMN switch_to_letters_after_space INTEGER NOT NULL DEFAULT $DEFAULT_SWITCH_TO_LETTERS_AFTER_SPACE",
             )
         }
     }
@@ -309,5 +321,38 @@ val MIGRATION_26_27 =
             db.execSQL(
                 "ALTER TABLE AppSettings ADD COLUMN slide_hold_enabled INTEGER NOT NULL DEFAULT $DEFAULT_SLIDE_HOLD_ENABLED",
             )
+        }
+    }
+
+val MIGRATION_28_29 =
+    object : Migration(28, 29) {
+        override fun migrate(db: SupportSQLiteDatabase) {
+            val columns = db.appSettingsColumns()
+            if ("long_press_duration" !in columns) {
+                db.execSQL(
+                    "ALTER TABLE AppSettings ADD COLUMN long_press_duration INTEGER NOT NULL DEFAULT $DEFAULT_LONG_PRESS_DURATION",
+                )
+            }
+            if ("switch_to_letters_after_space" !in columns) {
+                db.execSQL(
+                    "ALTER TABLE AppSettings ADD COLUMN switch_to_letters_after_space INTEGER NOT NULL DEFAULT $DEFAULT_SWITCH_TO_LETTERS_AFTER_SPACE",
+                )
+            }
+            if ("switch_ime_mode" !in columns) {
+                db.execSQL(
+                    "ALTER TABLE AppSettings ADD COLUMN switch_ime_mode INTEGER NOT NULL DEFAULT $DEFAULT_SWITCH_IME_MODE",
+                )
+            }
+        }
+    }
+
+val MIGRATION_29_30 =
+    object : Migration(29, 30) {
+        override fun migrate(db: SupportSQLiteDatabase) {
+            if ("long_press_duration" !in db.appSettingsColumns()) {
+                db.execSQL(
+                    "ALTER TABLE AppSettings ADD COLUMN long_press_duration INTEGER NOT NULL DEFAULT $DEFAULT_LONG_PRESS_DURATION",
+                )
+            }
         }
     }
